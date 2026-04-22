@@ -1,5 +1,7 @@
 # YouTube Downloader — Windows
 
+**Sürüm: v1.0.0** · İkili: `YoutubeDownloader-v1.0.0.exe`
+
 Windows masaüstü için yt-dlp tabanlı, PySide6 (Qt 6) arayüzlü YouTube indirici.
 Normal videolar, **Shorts** ve **oynatma listeleri (playlist)** desteklenir; arayüz ekran boyutuna otomatik uyum sağlar (HiDPI, dar pencerede ikon-only araç çubuğu).
 
@@ -31,11 +33,26 @@ python -m pytest
 
 ## Windows .exe üretimi
 
+### Yerel (Windows makinesinde)
+
 ```bat
 build.bat
 ```
 
-`dist\YoutubeDownloader.exe` üretilir; ffmpeg ikilisi `--add-binary` ile gömülür. ffmpeg statik Windows build'ini önceden `ffmpeg\bin\ffmpeg.exe` konumuna koymanız gerekir.
+`dist\YoutubeDownloader-v<sürüm>.exe` üretilir (ör. `YoutubeDownloader-v1.0.0.exe`). ffmpeg ikilisi `--add-binary` ile gömülür; statik Windows ffmpeg build'ini önceden `ffmpeg\bin\ffmpeg.exe` konumuna koymanız gerekir.
+
+### Otomatik (GitHub Actions)
+
+Repo'da `.github/workflows/build-windows.yml` workflow'u tanımlı. Tag oluşturup push ettiğinizde Windows runner'da otomatik `.exe` üretilir ve GitHub Release'e eklenir:
+
+```sh
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+Manuel tetikleme için Actions sekmesinden **Run workflow** seçilebilir; çıktı build artifact'i olarak indirilebilir.
+
+> Not: `.exe` ikilisi git repo'sunda saklanmaz; GitHub Releases üzerinden dağıtılır.
 
 ## Branch Düzeni
 

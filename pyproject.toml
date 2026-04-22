@@ -1,6 +1,6 @@
 [project]
 name = "youtube-downloader-windows"
-version = "0.1.0"
+version = "1.0.0"
 description = "Windows YouTube downloader with Shorts and playlist support"
 requires-python = ">=3.11"
 dependencies = [

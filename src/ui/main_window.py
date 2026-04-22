@@ -54,7 +54,8 @@ class MainWindow(QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
-        self.setWindowTitle("YouTube Downloader")
+        from src import __version__
+        self.setWindowTitle(f"YouTube Downloader v{__version__}")
         self._rows: list[DownloadRow] = []
         self._workers: list[DownloadWorker] = []
         self._queue: deque[tuple[DownloadRow, DownloadWorker]] = deque()
