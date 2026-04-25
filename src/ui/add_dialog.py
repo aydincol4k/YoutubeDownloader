@@ -19,7 +19,7 @@ from src.core.url_utils import parse
 
 
 _QUALITY_LABEL = {
-    "best": "En iyi (otomatik)",
+    "best": "En yüksek (4K/8K dahil otomatik)",
     "1080p": "1080p",
     "720p": "720p",
     "480p": "480p",

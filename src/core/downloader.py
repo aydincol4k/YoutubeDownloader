@@ -139,7 +139,7 @@ def _format_opts(quality: str, container: str) -> dict:
             ],
         }
     if quality == "best":
-        fmt = "bv*+ba/b"
+        fmt = "bestvideo*+bestaudio/best"
     else:
         height = quality.rstrip("p")
         fmt = f"bv*[height<={height}]+ba/b[height<={height}]"
