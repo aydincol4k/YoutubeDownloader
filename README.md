@@ -53,7 +53,3 @@ git push origin v1.0.0
 Manuel tetikleme için Actions sekmesinden **Run workflow** seçilebilir; çıktı build artifact'i olarak indirilebilir.
 
 > Not: `.exe` ikilisi git repo'sunda saklanmaz; GitHub Releases üzerinden dağıtılır.
-
-## Branch Düzeni
-
-Bu depodaki diğer platformlar (`ios`, `android`, `macos`) ayrı branch'lerde geliştirilir. Bu branch (`claude/youtube-downloader-windows-VUU63`) yalnızca Windows uygulamasını içerir.
